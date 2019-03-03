@@ -1,0 +1,37 @@
+
+{
+  "events": [
+    {
+      "custom": {
+        "ios-key3": {
+          "i-inner-key2": "ios-val-2",
+          "i-inner-key1": "ios-val-1"
+        },
+        "ios-key2": "ios-2",
+        "ios-key1": "ios-1"
+      },
+      "location": "unknown",
+      "verb": "report",
+      "noun": "custom",
+      "is_ad_bool": false,
+      "ad_type": null,
+      "url": null,
+      "is_ad": "no",
+      "timestamp": 1494016874409,
+      "selected": false
+    }
+  ],
+  "device_context": {
+    "user_id": "89224496",
+    "anon_id": "230bfee1-27f7-4552-bf61-cf90269ce71e",
+    "app_version": "DEBUG",
+    "build_number": 1750000000,
+    "device": "Android",
+    "radio_type": "unknown",
+    "resolution": "1080x1794",
+    "platform": "android",
+    "syn_id": "34eed795-99bb-482e-993f-5362e3225d9f",
+    "_site": "android-prod",
+    "heartbeat_interval": 5000
+  }
+}

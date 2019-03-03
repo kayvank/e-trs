@@ -1,0 +1,60 @@
+---
+team: data
+
+_service: e-trs
+_port: 9000
+_min_replicas: 2
+_max_replicas: 3
+
+_health_check:
+  path: /status/
+
+_port: 9000
+
+vars_templates:
+  - name: generic-service
+    vars:
+      autoDNS: True
+      name: '{{ _service }}'
+      namespace: '{{ team }}'
+      image: '{{ docker_image | default("vevo/" + _service + ":latest") }}'
+      port: '{{ _port }}'
+      service:
+        annotations:
+          service.beta.kubernetes.io/aws-load-balancer-backend-protocol: tcp
+      secrets:
+        - AWS_SECRET_ACCESS_KEY
+        - AWS_ACCESS_KEY_ID
+      env:
+        SERVICE_PORT: '{{ _port }}'
+        SERVICE_NAME: '{{ _service }}'
+        DATADOG_PREFIX: '{{ _service }}'
+        DATADOG_STATSD_HOST: dd-agent.kube-system
+      resources:
+        limits:
+          cpu: 4
+          memory: 1536Mi
+        requests:
+          cpu: 3
+          memory: 1024Mi
+      livenessProbe:
+        timeoutSeconds: 69
+        httpGet:
+          path: '{{ _health_check.path }}'
+      readinessProbe:
+        httpGet:
+          path: '{{ _health_check.path }}'
+        initialDelaySeconds: 5
+kubernetes:
+  horizontalpodautoscalers:
+  - metadata:
+      name: '{{ _service }}'
+      namespace: '{{ team }}'
+    spec:
+      minReplicas: '{{ _min_replicas }}'
+      scaleTargetRef:
+        apiVersion: autoscaling/v1
+        kind: Deployment
+        name: '{{ _service }}'
+      maxReplicas: '{{ _max_replicas }}'
+      targetCPUUtilizationPercentage: 75

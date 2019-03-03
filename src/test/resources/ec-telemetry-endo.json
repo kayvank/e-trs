@@ -1,0 +1,70 @@
+{
+   "metadata" : {
+     "event_type" : "endo-1.0",
+     "app_name" : "event-collector",
+     "app_version" : "2.1.0",
+     "build_number" : "1",
+     "timestamp" : 1493422903450
+   },
+   "event_id" : "728dc062-afeb-42f3-b8e1-5274fc716d9f",
+   "event_data" : {
+     "qos_stream_type" : "MP4",
+     "ad_type" : null,
+     "qos_buffering_at_end" : false,
+     "playlist_name" : "no playlist",
+     "auto_play" : true,
+     "duration" : 283866,
+     "noun_id" : "USRV81700408",
+     "is_ad_bool" : false,
+     "timestamp" : 1493422091706,
+     "title" : "love-galore",
+     "custom" : {
+       "v1" : "k1",
+       "v2" : "k2",
+       "v3" : "k3",
+       "v4" : "k4"
+     },
+     "playlist_id" : "no playlist",
+     "location" : "_watch",
+     "qos_startup_time" : 21350,
+     "is_ad" : "no",
+     "play_id" : "2e342d8d-2cbb-4e3a-ba13-357cfa138da0",
+     "asset_name" : "sza.love-galore",
+     "verb" : "play",
+     "primary_artist" : "sza",
+     "noun" : "video",
+     "name" : "start-stream",
+     "stream_count" : 1,
+     "video_id" : "USRV81700408",
+     "bandwidth" : 2,
+     "qos_buffering_spinner_events" : 1,
+     "url" : "https://www.vevo.com/watch/sza/love-galore/USRV81700408",
+     "qos_buffering_spinner_duration" : 21350,
+     "time" : 0
+   },
+   "device_context" : {
+     "syn_id" : "bb8a16ab-1279-4f17-969b-1dba5eb60eda",
+     "user_id" : "33758726",
+     "build_number" : "407-b119",
+     "referrer" : "",
+     "radio_type" : "unknown",
+     "platform" : "web",
+     "_site" : "vevo-prod",
+     "device" : "web",
+     "anon_id" : "118091917",
+     "app_version" : "0.3",
+     "resolution" : "3008x1692"
+   },
+   "sent_at" : 1493422091714,
+   "geo_ip" : {
+     "ip_address" : "10.0.21.17",
+     "lat" : 0,
+     "lng" : 0,
+     "city" : "",
+     "region" : "",
+     "postal_code" : "",
+     "country" : ""
+   },
+   "http_user_agent" : "python-requests/2.11.1",
+   "ip_address" : "10.0.21.17"
+ }

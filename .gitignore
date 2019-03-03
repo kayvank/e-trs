@@ -1,0 +1,22 @@
+logs
+.project
+.settings
+.classpath
+target/
+**/tags
+**/TAGS
+.ensime
+.ensime*/
+.idea*/
+.history
+.cache
+.DS_Store
+*.sc
+*.swp
+.#*
+native/
+## local overrides
+.envrc
+.env
+.terraform/
+stringer_build/
